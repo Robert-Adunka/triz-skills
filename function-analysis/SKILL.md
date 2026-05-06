@@ -5,7 +5,7 @@ description: "TRIZ Function Analysis for technical systems — identifies tools,
 
 <!-- 
   Based on the TRIZ Function Analysis Prompt
-  Copyright (c) 2025 Jens Traeger
+  Copyright (c) 2025 Jens Traeger, 2026 Robert Adunka
   Licensed under the MIT License — see LICENSE in the repository root.
 -->
 
@@ -70,12 +70,12 @@ Functions are either useful (U) or harmful (H). Only useful functions are graded
 - **I** = Insufficient (underperforming)
 - **E** = Excessive (overperforming)
 
-Harmful functions receive "---" for degree of fulfillment.
+Harmful functions are empty in the degree of fulfillment.
 
 ### Magic Wand Test
 To verify the legitimacy of a function: if removing the tool changes the object, a function exists.
 
 ### Main Function and Targets
-The main function must always be identified. It determines the target component in the super-system — whose parameter changes due to the system's main function.
+The main function must always be identified. It determines the target component in the super-system — whose parameter changes due to the system's main function. The main function will not be written into the Function Analysis Table in the form System Action Target. There must be a Component of the system that then fullfills the main function
 
-**Example:** Main function of an airplane: Transport passengers and cargo. Targets: passengers and cargo. Changed parameter: geographic location.
+**Example:** Main function of an airplane: Transport passengers and cargo. Targets: passengers and cargo. Changed parameter: geographic location. In the function table: airplane body transports passengers and cargo
