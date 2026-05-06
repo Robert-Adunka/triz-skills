@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Assets (large binary files — PDFs, Excel, images)
+*.pdf
+*.xlsx
+*.xls
+*.png
+*.jpg
+*.jpeg
