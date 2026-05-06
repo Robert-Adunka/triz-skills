@@ -28,22 +28,33 @@ Guide users through a structured Function Analysis of a technical system using T
 
 5. **CSV Export (optional).** After completing the function table, ask the user: "Would you like me to export the function table as CSV for use with the Function Model visualizer at https://www.triz-consulting.de/FunctionModel/index.html?"
 
-   If yes, output the table in the following CSV format (German column headers, comma-separated):
+   If yes, output the table in the following CSV format. Always use these exact English column headers, regardless of the language of the analysis:
 
    ```
-   Funktionsträger,Aktion,Objekt der Funktion,Kategorie,Erfüllungsgrad,veränderter/erhaltener Parameter des Objekts
-   [Tool],[Action],[Object],[U or H],[N / I / E / ---],[changed/retained parameter]
+   Tool,Action,Object,Category,Degree,Parameter
+   [Tool],[Action],[Object],[U or H],[N / I / E / leave empty for H],[changed/retained parameter]
    ```
 
-   Example:
+   Rules:
+   - Headers are always English: `Tool,Action,Object,Category,Degree,Parameter`
+   - Data values use the language of the analysis (German or English)
+   - Degree is empty for harmful functions (H) — do not write "---"
+
+   Example (English):
    ```
-   Funktionsträger,Aktion,Objekt der Funktion,Kategorie,Erfüllungsgrad,veränderter/erhaltener Parameter des Objekts
-   Glasflasche,hält,Bier,U,N,Position
-   Glasflasche,stoppt,Bier,U,N,Austritt des Biers
-   Glasflasche,überträgt,UV-Strahlung,H,---,UV-Einwirkung auf Bier
+   Tool,Action,Object,Category,Degree,Parameter
+   User,moves,Handle,U,N,Position
+   Cutting wheel,cuts,Pizza,U,I,Structure
+   Cutting wheel,injures,Fingers,H,,Integrity
    ```
 
-   Use the language of the analysis (German if conducted in German, English if in English) for the data values. Always use the German column headers as shown above.
+   Example (German):
+   ```
+   Tool,Action,Object,Category,Degree,Parameter
+   Benutzer,bewegt,Griff,U,N,Position
+   Schneidrad,schneidet,Pizza,U,I,Struktur
+   Schneidrad,verletzt,Finger,H,,Unversehrtheit
+   ```
 
    After outputting the CSV, always add this link on a new line:
 
