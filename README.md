@@ -34,9 +34,65 @@ Each skill folder contains a `SKILL.md` with the methodology guide, and optional
 | `system-operator` | System Operator (9 Boxes) |
 | `trimming` | Trimming |
 
-## MCP Server
+## MCP Server Setup
 
-These skills are served via an n8n MCP Server. See the [setup guide](../n8n-Info/TRIZ-MCP-Server-Anleitung.md) for connection details.
+These skills are served via an n8n MCP Server at:
+
+```
+https://n8n.triz-consulting.de/mcp/triz-skills
+```
+
+### Claude Code (Terminal)
+
+Run once in your terminal:
+
+```bash
+claude mcp add triz-skills --transport http https://n8n.triz-consulting.de/mcp/triz-skills \
+  --header "Authorization: Bearer ba160317c033f6d76f2f4bc4645760f0ccae214671c3fa21e530d5b5b4276cd4" \
+  --scope user
+```
+
+Verify the connection:
+
+```bash
+claude mcp list
+```
+
+`triz-skills` should appear with `✓ Connected`.
+
+### Claude Desktop
+
+Open `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows) and add the following to the `mcpServers` block:
+
+```json
+"triz-skills": {
+  "command": "npx",
+  "args": [
+    "-y",
+    "mcp-remote",
+    "https://n8n.triz-consulting.de/mcp/triz-skills",
+    "--header",
+    "Authorization: Bearer ba160317c033f6d76f2f4bc4645760f0ccae214671c3fa21e530d5b5b4276cd4"
+  ]
+}
+```
+
+Then restart Claude Desktop. The skills appear under the 🔨 tools icon in the chat.
+
+### Requirements
+
+- Node.js must be installed (`node --version` to check) → https://nodejs.org
+- Claude Code ≥ 1.0 or Claude Desktop (current version)
+
+### Usage
+
+Just ask naturally — Claude selects the right skill automatically:
+
+> *"I want to do a function analysis of my electric toothbrush."*
+
+> *"Let's analyze the smartphone using the System Operator."*
+
+> *"Help me find the root cause of this manufacturing defect."*
 
 ## License
 
