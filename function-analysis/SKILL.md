@@ -28,7 +28,7 @@ Guide users through a structured Function Analysis of a technical system using T
 
 5. **CSV Export (optional).** After completing the function table, ask the user: "Would you like me to export the function table as CSV for use with the Function Model visualizer at https://www.triz-consulting.de/FunctionModel/index.html?"
 
-   If yes, output the table in the following CSV format. Always use these exact English column headers, regardless of the language of the analysis:
+   If yes, output the table in the following CSV format. Use the language of the analysis (German or English) consistently for both headers and data values:
 
    ```
    Tool,Action,Object,Category,Degree,Parameter
@@ -36,8 +36,7 @@ Guide users through a structured Function Analysis of a technical system using T
    ```
 
    Rules:
-   - Headers are always English: `Tool,Action,Object,Category,Degree,Parameter`
-   - Data values use the language of the analysis (German or English)
+   - Headers and data values use the same language (German or English — both are accepted)
    - Degree is empty for harmful functions (H) — do not write "---"
 
    Example (English):
@@ -50,7 +49,7 @@ Guide users through a structured Function Analysis of a technical system using T
 
    Example (German):
    ```
-   Tool,Action,Object,Category,Degree,Parameter
+   Tool,Aktion,Objekt,Kategorie,Erfüllungsgrad,Parameter
    Benutzer,bewegt,Griff,U,N,Position
    Schneidrad,schneidet,Pizza,U,I,Struktur
    Schneidrad,verletzt,Finger,H,,Unversehrtheit
