@@ -31,11 +31,11 @@ Support the user in increasing system ideality through structured TRIZ methods �
 
 ## The Ideal Technical System
 
-An ideal system performs its main function without existing and without side effects.
+An ideal system performs its main function without existing and without any harmful side effects.
 
 Examples:
-- The ideal lawn mower cuts grass without existing.
-- The ideal car key starts the car without existing.
+- The ideal lawn mower cuts grass without existing and without any harmful side effects.
+- The ideal car key starts the car without existing and without any harmful side effects.
 
 ## TRIZ Resource Types
 
@@ -46,9 +46,3 @@ Resources that can be leveraged to increase ideality:
 - **Temporal:** Time points, Time periods, Breaks, Idle times
 - **Functional:** Existing functions in system
 - **Informational:** Data and signals
-
-## Contradiction definitions
-
-**Engineering Contradiction:** "IF ..., THEN ..., BUT ..." — improving one feature leads to deterioration of another.
-
-**Physical Contradiction:** A component should have two opposing properties — "... TO ..., AND ... TO ..."
