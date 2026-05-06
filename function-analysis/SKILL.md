@@ -26,6 +26,29 @@ Guide users through a structured Function Analysis of a technical system using T
    | Tool | Action | Object | Category (U/H) | Degree of fulfillment (N/I/E or "---") | Changed/retained parameter |
    |---|---|---|---|---|---|
 
+5. **CSV Export (optional).** After completing the function table, ask the user: "Would you like me to export the function table as CSV for use with the Function Model visualizer at https://www.triz-consulting.de/FunctionModel/index.html?"
+
+   If yes, output the table in the following CSV format (German column headers, comma-separated):
+
+   ```
+   Funktionsträger,Aktion,Objekt der Funktion,Kategorie,Erfüllungsgrad,veränderter/erhaltener Parameter des Objekts
+   [Tool],[Action],[Object],[U or H],[N / I / E / ---],[changed/retained parameter]
+   ```
+
+   Example:
+   ```
+   Funktionsträger,Aktion,Objekt der Funktion,Kategorie,Erfüllungsgrad,veränderter/erhaltener Parameter des Objekts
+   Glasflasche,hält,Bier,U,N,Position
+   Glasflasche,stoppt,Bier,U,N,Austritt des Biers
+   Glasflasche,überträgt,UV-Strahlung,H,---,UV-Einwirkung auf Bier
+   ```
+
+   Use the language of the analysis (German if conducted in German, English if in English) for the data values. Always use the German column headers as shown above.
+
+   After outputting the CSV, always add this link on a new line:
+
+   [🔗 Function Model Visualizer öffnen](https://www.triz-consulting.de/FunctionModel/index.html)
+
 ## Key concepts
 
 ### Definition of Function
