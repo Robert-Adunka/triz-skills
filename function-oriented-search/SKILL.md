@@ -31,7 +31,7 @@ Database query schemas are in the `references/` directory:
 3. **Provide database suggestions.** Suggest searches from online resources and, where possible, provide ready-to-use queries. Regardless of chat language, always provide database queries in English.
 
 ### Oxford Creativity Database
-URL: http://wbam2244.dns-systems.net/EDB_Welcome.php
+URL: https://wbam2244.dns-systems.net/EDB/index.php
 
 Three query types are available. Read `references/oxford_creativity.txt` for allowed values:
 - **Function Query:** Select an Action + Object (e.g., "Heat" + "Liquid")
