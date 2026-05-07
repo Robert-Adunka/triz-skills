@@ -1,6 +1,6 @@
 # TRIZ Skills
 
-25 TRIZ methodology skills for use with Claude via MCP Server.
+26 TRIZ methodology skills for use with Claude via MCP Server.
 
 Each skill folder contains a `SKILL.md` with the methodology guide, and optionally a `references/` folder with supporting material (matrices, principles, examples).
 
@@ -10,7 +10,6 @@ Each skill folder contains a `SKILL.md` with the methodology guide, and optional
 |---|---|
 | `76-standard-solutions` | 76 Standard Solutions |
 | `business-function-analysis` | Business Function Analysis |
-| `business-msd` | Business Multi-Screen Diagram |
 | `cause-effect-chain-analysis` | Cause-Effect Chain Analysis |
 | `contradiction-solver` | Contradiction Solver (Altshuller Matrix + Matrix 2003) |
 | `derivative-resources` | Derivative Resources |
@@ -26,12 +25,13 @@ Each skill folder contains a `SKILL.md` with the methodology guide, and optional
 | `patent-analyzer` | Patent Analyzer |
 | `perception-mapping` | Perception Mapping |
 | `physical-contradictions` | Physical Contradictions |
+| `problem-operator` | Problem Operator (Problem-Oriented Nine Screen Approach) |
 | `resource-analysis` | Resource Analysis |
 | `root-cause-analysis` | Root Cause Analysis |
 | `smart-little-people` | Smart Little People |
 | `solutions-at-system-levels` | Solutions at System Levels |
 | `system-description` | System Description |
-| `system-operator` | System Operator (9 Boxes) |
+| `system-operator` | System Operator (Multi-Screen Diagram) |
 | `trimming` | Trimming |
 
 ## MCP Server Setup
@@ -96,4 +96,5 @@ Just ask naturally — Claude selects the right skill automatically:
 
 ## License
 
-Based on TRIZ methodology prompts by Jens Traeger. Licensed under the MIT License.
+Copyright (c) 2026 Robert Adunka. Based on original TRIZ methodology prompts by Jens Träger.
+Licensed under the MIT License — see [LICENSE](LICENSE) in the repository root.
