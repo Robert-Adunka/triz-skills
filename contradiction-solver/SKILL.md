@@ -11,66 +11,131 @@ description: "TRIZ Contradiction Solver and 40 Inventive Principles — resolves
 
 # TRIZ Contradiction Solver and 40 Inventive Principles
 
-Identify and solve engineering and physical contradictions using TRIZ principles and tools such as the Altshuller Matrix, Matrix 2003, and the 40 Inventive Principles.
+Identify and solve engineering and physical contradictions using the Altshuller Matrix, Matrix 2003, and the 40 Inventive Principles.
 
-## Reference files
+## How this tool works (two-phase)
 
-All reference data is in the `references/` directory. Read files as needed:
+This tool operates in two phases:
 
-- **40 Inventive Principles:** `40_Inventive_Principles_EN.md` (English), `40_Innovationsprinzipien_DE.md` (German) — detailed descriptions with synonyms, sub-principles, and examples
-- **Application guidance:** `40IP_Applications.csv` — whether each principle applies to component, system, or environment
-- **Altshuller Matrix:** `Altshuller_39_Parameters.csv` (parameters), `Altshuller_Contradiction_Matrix_AI.csv` (matrix lookup)
-- **Matrix 2003:** `Matrix_2003_Parameters.csv` (parameters), `Matrix_2003_AI.csv` (matrix lookup)
-- **Process guides:** `Solving_Engineering_Contradictions_Altshuller_Matrix.txt`, `Solving_Engineering_Contradictions_Matrix_2003.txt`, `Solving_Physical_Contradictions.txt`
-- **Examples:** `examples.txt`
+**Phase 1 — Init (first call, no indices):**  
+Call this tool with just the user's `query`. The response contains this methodology guide and the complete numbered parameter lists for both matrices. Use these lists to guide the user through parameter mapping.
+
+**Phase 2 — Calculate (second call, with indices):**  
+After the user has confirmed the abstract TRIZ parameters, call this tool again with:
+- `matrix_type`: `"altshuller"` or `"matrix_2003"`
+- `improving_indices`: comma-separated 1-based parameter numbers for the improving side (e.g. `"9,14"`)
+- `worsening_indices`: comma-separated 1-based parameter numbers for the worsening side (e.g. `"25,33,19"`)
+
+The tool then computes all (improving × worsening) matrix intersections, scores the inventive principles (1st position = 100 pts, 2nd = 90 pts, 3rd = 80 pts, …), aggregates across all cells, and returns ranked principles with their names and sub-principles.
+
+**Important:** Physical contradictions do NOT require Phase 2 — solve them directly using the separation principles below.
+
+---
 
 ## Interaction flow
 
-1. **Problem input.** Ask the user for a problem statement or task. Wait for user input.
+1. **Problem input.** Ask the user for a problem statement or contradiction. Wait for user input.
 
-2. **Identify the contradiction type:** engineering contradiction or physical contradiction. Help the user formulate at least a goal or problem.
+2. **Identify the contradiction type:**
+   - **Engineering contradiction:** improving one parameter worsens another  
+     → "IF …, THEN …, BUT …"
+   - **Physical contradiction:** a parameter must have two opposing values at once  
+     → "X must be [A] IN ORDER TO …, AND X must be [not-A] IN ORDER TO …"
 
-3. **Apply the appropriate method:**
-   - If an engineering contradiction is given: ask whether to use the Altshuller Matrix or Matrix 2003, then follow the corresponding process guide step by step
-   - If a physical contradiction is given: follow the process in `Solving_Physical_Contradictions.txt` step by step
-   - If no contradiction is specified: apply the 40 Inventive Principles directly and analyze their applicability to the user's case
+3. **Engineering contradiction → follow the two-phase matrix flow:**
 
-4. **System context.** When analyzing the technical system, classify it into super-system, technical system, and sub-system via component analysis.
+   a. Ask whether to use the **Altshuller Matrix** (39 classic parameters) or **Matrix 2003** (48 modern parameters). Recommend Matrix 2003 for modern technical systems.
+
+   b. **Map concrete → abstract (multiple allowed):**  
+      From the Phase 1 parameter list, identify one or more abstract TRIZ parameters that match the user's concrete improving parameter. Then do the same for the worsening parameter.  
+      A single concrete parameter often maps to multiple abstract ones — this is expected and important.
+
+      Example:  
+      Concrete worsening parameter: *"Ladekomfort"*  
+      → Altshuller abstract: 25 (Loss of time) + 33 (Ease of operation) + 9 (Speed)
+
+   c. **Present and confirm** the proposed abstract parameters with the user before proceeding.
+
+   d. **Call this tool (Phase 2)** with the confirmed parameter numbers. The tool calculates the lookup across all combinations and returns ranked inventive principles.
+
+   e. **Present the results:** show the ranked principles, explain how each applies to the specific problem, and suggest concrete solution directions.
+
+4. **Physical contradiction → solve directly (no matrix call needed):**
+
+   Express the contradiction as: *"X must be [A] IN ORDER TO …, AND X must be [not-A] IN ORDER TO …"*  
+   Apply the four separation principles:
+   - **Separation in Time** — A at one time, not-A at another
+   - **Separation in Space** — A in one place, not-A in another  
+   - **Separation between Parts and Whole** — A at part level, not-A at system level
+   - **Separation between Conditions** — A under one condition, not-A under another
+
+   For each applicable separation, suggest inventive principles that realize it.
+
+5. **No clear contradiction:** Apply the 40 Inventive Principles directly. Scan each principle for applicability, consider sub-principles and synonyms.
+
+---
 
 ## Key definitions
 
 ### Engineering Contradiction
-A statement where improving one feature leads to deterioration of another.
-- English: "IF ..., THEN ..., BUT ..."
-- German: "WENN ..., DANN ..., ABER ..."
+Improving one system parameter causes deterioration of another.  
+Format: "IF …, THEN …, BUT …" / "WENN …, DANN …, ABER …"
 
-Example: "IF the engine gets stronger, THEN the car can go faster, BUT it consumes more fuel."
+Example: "IF the barrel of the muzzle-loader is long, THEN accuracy increases, BUT loading comfort decreases."
 
 ### Physical Contradiction
-A situation where a parameter must simultaneously take two opposing values for valid reasons (goal or natural law).
-- English: "... TO ..., AND ... TO ..."
-- German: "... DAMIT ..., UND ... DAMIT ..."
+A parameter must simultaneously take two opposing values, each justified by a different requirement.  
+Format: "X must be [A] TO …, AND X must be [not-A] TO …"
 
-Example: "A boat should be wide TO prevent capsizing, AND it should be narrow TO make it go fast."
-
-Always include both reasons — they are necessary to identify solutions.
+Example: "A boat must be wide TO prevent capsizing, AND it must be narrow TO go fast."
 
 ### Nomenclature
-In English: refer to Genrikh Saulovich Altshuller and the Altshuller Matrix.
-In German: refer to Genrich Saulowitsch Altschuller and the Altschuller Matrix.
+- English: Altshuller Matrix, Inventive Principles
+- German: Altschuller-Matrix, Innovationsprinzipien
 
-## Solving engineering contradictions
+---
 
-The Altshuller Matrix and Matrix 2003 have **different** parameter sets — keep them clearly separated.
+## 40 Inventive Principles — Quick Reference
 
-For the **Altshuller Matrix**: read `Solving_Engineering_Contradictions_Altshuller_Matrix.txt` and follow its 7 steps. Use `Altshuller_39_Parameters.csv` for parameters and `Altshuller_Contradiction_Matrix_AI.csv` for the matrix lookup.
-
-For the **Matrix 2003**: read `Solving_Engineering_Contradictions_Matrix_2003.txt` and follow its 7 steps. Use `Matrix_2003_Parameters.csv` for parameters and `Matrix_2003_AI.csv` for the matrix lookup.
-
-## Solving physical contradictions
-
-Read `Solving_Physical_Contradictions.txt` and follow its instructions step by step. Help the user express a parameter with two opposing values and justify both sides.
-
-## Ambiguous tasks (no clear contradiction)
-
-If no Engineering Contradiction or Physical Contradiction is given or can be derived, apply the 40 Inventive Principles directly: look up principles in `40_Inventive_Principles_EN.md` (or DE version), consider synonyms, sub-principles, and examples. Use `40IP_Applications.csv` to recommend whether the principle applies to component, system, or environment level.
+| # | EN | DE |
+|---|----|----|
+| 1 | Segmentation | Zerteilen |
+| 2 | Taking out | Extraktion |
+| 3 | Local quality | Lokale Qualität |
+| 4 | Asymmetry | Asymmetrie |
+| 5 | Merging | Zusammenführen |
+| 6 | Universality | Universalität |
+| 7 | Nested doll | Schachtelung |
+| 8 | Anti-weight | Gegengewicht |
+| 9 | Preliminary anti-action | Vorzeitige Gegenwirkung |
+| 10 | Preliminary action | Vorherige Wirkung |
+| 11 | Beforehand cushioning | Vorbeugungsmaßnahmen |
+| 12 | Equipotentiality | Äquipotentialität |
+| 13 | The other way round | Umkehrung |
+| 14 | Spheroidality — Curvature | Sphärizität |
+| 15 | Dynamics | Dynamisierung |
+| 16 | Partial or excessive action | Teil- oder Überwirkung |
+| 17 | Another dimension | Dimensionswechsel |
+| 18 | Mechanical vibration | Mechanische Schwingung |
+| 19 | Periodic action | Periodische Wirkung |
+| 20 | Continuity of useful action | Kontinuität der nützlichen Wirkung |
+| 21 | Skipping | Überspringen |
+| 22 | Blessing in disguise | Umwandlung von Nachteilen |
+| 23 | Feedback | Rückkopplung |
+| 24 | Intermediary | Vermittler |
+| 25 | Self-service | Selbstbedienung |
+| 26 | Copying | Kopieren |
+| 27 | Cheap short-living | Billige Kurzlebigkeit |
+| 28 | Mechanics substitution | Mechanikersatz |
+| 29 | Pneumatics and hydraulics | Pneumatik und Hydraulik |
+| 30 | Flexible shells and thin films | Flexible Hüllen und dünne Folien |
+| 31 | Porous materials | Poröse Materialien |
+| 32 | Color changes | Farbwechsel |
+| 33 | Homogeneity | Homogenität |
+| 34 | Discarding and recovering | Verwerfen und Wiederherstellen |
+| 35 | Parameter changes | Parameteränderung |
+| 36 | Phase transitions | Phasenübergang |
+| 37 | Thermal expansion | Wärmedehnung |
+| 38 | Strong oxidants | Starke Oxidationsmittel |
+| 39 | Inert atmosphere | Inertgas-Atmosphäre |
+| 40 | Composite materials | Verbundwerkstoffe |
