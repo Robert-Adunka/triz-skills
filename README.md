@@ -60,6 +60,20 @@ claude mcp list
 
 `triz-skills` should appear with `✓ Connected`.
 
+### Claude Code (Web)
+
+Open [claude.ai/code](https://claude.ai/code), then:
+
+1. Click **Customize** (below the chat input)
+2. Select the **Connectors** tab
+3. Click **+** (top right) to add a new connector
+4. Fill in:
+   - **Name:** `TRIZ Skills`
+   - **Remote MCP Server URL:** `https://n8n.triz-consulting.de/mcp/triz-skills-web`
+5. Click **Save**
+
+The skills appear immediately — no restart required.
+
 ### Claude Desktop
 
 Open `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows) and add the following to the `mcpServers` block:
