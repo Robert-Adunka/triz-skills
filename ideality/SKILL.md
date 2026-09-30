@@ -74,7 +74,7 @@ Examples:
 
 Resources that can be leveraged to increase ideality:
 - **Material:** substances and objects in or around the system
-- **Field-like (MATChEMIB):** Mechanical, Acoustic, Thermal, Chemical, Electromagnetic, Intermolecular, Biological
+- **Field-like (MATChEMIB):** Mechanical, Acoustic, Thermal, Chemical, Electrical, Magnetic, Electromagnetic, Intermolecular, Biological
 - **Spatial:** Surfaces, Volumes, Directions, Shapes
 - **Temporal:** Time points, Time periods, Breaks, Idle times
 - **Functional:** Existing functions in system
