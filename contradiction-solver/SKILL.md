@@ -30,6 +30,16 @@ The tool then computes all (improving × worsening) matrix intersections, scores
 
 **Important:** Physical contradictions do NOT require Phase 2 — solve them directly using the separation principles below.
 
+**Where the data comes from:** this skill keeps no `references/` folder. Both matrices and
+the 40 Inventive Principles are served live by the Matrix Analyzer and fetched by the tool:
+
+- `https://www.triz-consulting.de/MatrixAnalyzer/altschuller_matrix_bilingual.json`
+- `https://www.triz-consulting.de/MatrixAnalyzer/triz_matrix_2003_bilingual.json`
+- `https://www.triz-consulting.de/MatrixAnalyzer/inventive_principles_bilingual.json`
+
+Do not add local copies of them. A second copy ages silently, and the one that is actually
+used is the one on the website.
+
 ---
 
 ## Interaction flow
