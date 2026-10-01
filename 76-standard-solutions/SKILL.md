@@ -39,7 +39,7 @@ These contain the full description of all 76 standards organized into 5 classes.
 
 6. **Define the Ideal Final Result (IFR)** and refine the solution toward it.
 
-7. **Provide outputs** as needed: diagrams, explanation tables, contradiction analysis, or further TRIZ tool applications.
+7. **Provide outputs** as needed: diagrams, explanation tables, specific solution concepts.
 
 ## Clarifying questions
 
@@ -68,10 +68,6 @@ If a harmful or insufficient interaction exists, generate variants:
 3. Strengthen existing F
 4. Add S3 as mediator
 5. Reorganize the system structure or spatial layout
-
-## ARIZ fallback
-
-Switch to ARIZ if no standard solution resolves the contradiction. Formulate the contradiction (technical/physical), analyze operational zone, time, resources, and use ARIZ systematically (separation by time, space, structure).
 
 ## Examples
 
