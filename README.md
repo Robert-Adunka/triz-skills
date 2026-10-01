@@ -1,6 +1,6 @@
 # TRIZ Skills
 
-25 TRIZ methodology skills for use with Claude via MCP Server.
+TRIZ methodology skills for use with Claude and ChatGPT via MCP Server.
 
 Each skill folder contains a `SKILL.md` with the methodology guide, and optionally a `references/` folder with supporting material (matrices, principles, examples).
 
