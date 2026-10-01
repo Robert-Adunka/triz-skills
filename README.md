@@ -28,8 +28,10 @@ Each skill folder contains a `SKILL.md` with the methodology guide, and optional
 | `problem-operator` | Problem Operator (Problem-Oriented Nine Screen Approach) |
 | `resource-analysis` | Resource Analysis |
 | `root-cause-analysis` | Root Cause Analysis |
+| `root-conflict-analysis` | Root Conflict Analysis (RCA+) |
 | `smart-little-people` | Smart Little People |
 | `solutions-at-system-levels` | Solutions at System Levels |
+| `sustainability-assessment` | Sustainability Assessment |
 | `system-description` | System Description |
 | `system-operator` | System Operator (Multi-Screen Diagram) |
 | `trimming` | Trimming |
