@@ -95,7 +95,7 @@ Open `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or 
 
 Then restart Claude Desktop. The skills appear under the 🔨 tools icon in the chat.
 
-### ChatGPT
+### ChatGPT Desktop
 
 Open **Plugins** (Plugins, Skills und MCPs verwalten), then:
 
@@ -108,7 +108,7 @@ Open **Plugins** (Plugins, Skills und MCPs verwalten), then:
      - Value: `Bearer ba160317c033f6d76f2f4bc4645760f0ccae214671c3fa21e530d5b5b4276cd4`
 3. Click **Save** and start a new chat
 
-Ask ChatGPT which `triz_*` tools it sees. All 26 should be listed.
+Ask ChatGPT which `triz_*` tools it sees. All should be listed.
 
 > **Do not paste the token into "Bearer token environment variable".** That field expects the *name* of an environment variable, not the token. If it holds the token, ChatGPT reports that the configuration references an unset environment variable and does not start the server.
 
