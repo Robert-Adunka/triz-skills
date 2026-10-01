@@ -49,9 +49,9 @@ describe a system to start in automatic mode"* — that offer is not part of thi
    - **Maintain or reduce resource usage** — achieve more with less
    - **Add new useful functions** — expand what the system can do
 
-4. **For each strategy,** provide specific suggestions and identify potential contradictions (Engineering or Physical).
+4. **For each strategy,** provide specific suggestions.
 
-5. **Follow-up.** Ask the user if they want to explore one of the four strategies in more detail. Apply that strategy and identify Engineering or Physical Contradictions if applicable.
+5. **Follow-up.** Ask the user if they want to explore one of the four strategies in more detail, and apply that strategy.
 
 6. **Ideality modeling.** Formulate the **ideal technical system**: the system delivers its main function without existing and without harmful side effects. Consider if other systems can achieve the same or better functionality.
 
@@ -59,12 +59,12 @@ describe a system to start in automatic mode"* — that offer is not part of thi
 
 For each analysis provide:
 - **System summary:** name, main function, known issues
-- **Strategy 1 — Reduce harmful effects:** specific suggestions + contradictions identified
-- **Strategy 2 — Increase useful functions:** specific suggestions + contradictions identified
-- **Strategy 3 — Reduce resource usage:** specific suggestions + contradictions identified
-- **Strategy 4 — Add new functions:** specific suggestions + contradictions identified
+- **Strategy 1 — Reduce harmful effects:** specific suggestions
+- **Strategy 2 — Increase useful functions:** specific suggestions
+- **Strategy 3 — Reduce resource usage:** specific suggestions
+- **Strategy 4 — Add new functions:** specific suggestions
 - **Ideal technical system:** "The ideal [system] [performs main function] without existing and without harmful side effects."
-- **Next step recommendation:** which strategy to explore further, or which contradiction to resolve
+- **Next steps:** which strategy to explore further here, and which *other* tool to continue with
 
 ## The Ideality Equation
 
@@ -158,14 +158,22 @@ Resources that can be leveraged to increase ideality:
 - **Functional:** Existing functions in system
 - **Informational:** Data and signals
 
-## When you have named a contradiction, stop there
+## Next steps — and they belong to other tools
 
-Name it in IF/THEN/BUT form and hand it over. **Do not** look up the contradiction matrix,
-**do not** quote matrix parameter numbers, and **do not** name inventive principles by number.
-This skill carries neither matrix nor the 40 principles, so anything recited from memory is
-invented — and an invented parameter number looks exactly like a correct one, which makes it
-worse than no answer. Send the user to `contradiction-solver`, which reads both matrices and
-the principles from data rather than from memory.
+This skill raises ideality. It does **not** deepen the analysis and it does **not** generate
+solutions. Once the four strategies are on the table, say what could follow and name the tool —
+but do not do its work here.
+
+- **To go deeper into the task:** Function Analysis, Cause and Effect Chain Analysis, Trimming,
+  Resource Analysis, System Operator.
+- **To search for solutions:** contradiction analysis and the 40 Inventive Principles —
+  `contradiction-solver`, and for separation principles `physical-contradictions`.
+
+**Do not formulate contradictions here**, do not name contradiction matrix parameters by
+number, and do not name inventive principles by number. This skill carries neither matrix nor
+principles, so any such number is invented — and an invented number looks exactly like a
+looked-up one, which makes it worse than no answer. `contradiction-solver` reads them from
+data; send the user there.
 
 ## Writing
 
@@ -173,8 +181,3 @@ Write the ideality equation in plain text, never in LaTeX and never between doll
 chat frontend prints it literally. In German the ideal technical system is *das ideale
 technische System*, not *idealisiertes technisches System*.
 
-## Contradiction Definitions
-
-**Engineering Contradiction:** IF ..., THEN ..., BUT ... (e.g., "IF the engine is more powerful, THEN the car is faster, BUT fuel consumption increases").
-
-**Physical Contradiction:** A component should have two opposing properties (e.g., "A boat should be wide TO avoid capsizing AND narrow TO go fast").
