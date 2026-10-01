@@ -91,6 +91,10 @@ thinking instead of starting it.
   direction**, in brackets, visibly marked as examples.
 - Never let an idea stand alone as the result of a strategy.
 - Two or three good directions beat eight features.
+- **If the user asks for concrete ideas, give them** — do not refuse and do not send them to
+  another tool for that. Put each idea under the direction it belongs to, so the direction
+  stays visible. Refuse only the framing *"forget the directions, just list features"*, and
+  even then deliver the ideas underneath the directions rather than nothing at all.
 
 ## The Ideality Equation
 
