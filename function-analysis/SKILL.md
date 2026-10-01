@@ -48,10 +48,14 @@ ask again instead of assuming Automatic.
 
    Three rules decide whether the model is usable — see *Rules for the function model* below.
 
-5. **CSV export.** After the table is finished, ask: *"Shall I give you the function table as
-   CSV? It opens in both tools — the Function Model Visualizer and TIRAZIS."*
+5. **CSV export.** After the table is finished, ask whether the user wants it as CSV, mention
+   that one file opens in both tools — and then **stop and wait for the answer**.
 
-   If yes, output **one** CSV, in a code block, in this format:
+   Ask in the user's own language and in your own words. The wording in this skill is an
+   instruction to you, not a sentence to print: never quote it, never ask in English inside a
+   German answer, and never answer your own question by outputting the CSV straight away.
+
+   Only once the user has said yes, output **one** CSV, in a code block, in this format:
 
    ```
    Carrier,Carrier Type,Action,Object,Object Type,Status,Parameter
