@@ -72,9 +72,12 @@ Open [claude.ai/code](https://claude.ai/code), then:
 4. Fill in:
    - **Name:** `TRIZ Skills`
    - **Remote MCP Server URL:** `https://n8n.triz-consulting.de/mcp/triz-skills-web`
-5. Click **Save**
+   - **Authentication:** **No authentication** (claude.ai marks it as *Detected*)
+5. Click **Add**
 
 The skills appear immediately — no restart required.
+
+> **Do not choose "Sign in now" or "Sign in when needed".** The endpoint needs no login. With an OAuth option selected, claude.ai tries to sign in against n8n's own OAuth server, which rejects it with `{"error":"invalid_target","error_description":"Resource is not available for authorization"}`. If an existing connector shows this error, delete it and add it again with **No authentication**.
 
 ### Claude Desktop
 
