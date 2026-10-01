@@ -1,6 +1,6 @@
 ---
 name: function-analysis
-description: "TRIZ Function Analysis for technical systems — identifies tools, actions, objects, and functions, clarifies component relationships, and reveals the system's main function. Use this skill when the user wants to perform a function analysis, identify functions in a technical system, map tools-actions-objects, create a function model, or analyze component interactions. Also trigger on mentions of 'function analysis', 'function model', 'tool-action-object', 'function carrier', or when the user wants a CSV for the Function Model Visualizer or TIRAZIS."
+description: "TRIZ Function Analysis for technical systems — identifies tools, actions, objects, and functions, clarifies component relationships, and reveals the system's main function. Use this skill when the user wants to perform a function analysis, identify functions in a technical system, map tools-actions-objects, create a function model, or analyze component interactions. Also trigger on mentions of 'function analysis', 'function model', 'tool-action-object', 'function carrier', or when the user wants a CSV for the TRIZ Function Analysis Diagram Tool or TIRAZIS."
 ---
 
 <!-- 
@@ -49,7 +49,8 @@ ask again instead of assuming Automatic.
    Three rules decide whether the model is usable — see *Rules for the function model* below.
 
 5. **CSV export.** After the table is finished, ask whether the user wants it as CSV, mention
-   that one file opens in both tools — and then **stop and wait for the answer**.
+   that one file opens in both tools — the *TRIZ Function Analysis – Diagram Tool* and
+   *TIRAZIS* — and then **stop and wait for the answer**.
 
    Ask in the user's own language and in your own words. The wording in this skill is an
    instruction to you, not a sentence to print: never quote it, never ask in English inside a
@@ -93,12 +94,16 @@ ask again instead of assuming Automatic.
 
    Then add both links on their own lines:
 
-   [🔗 Function Model Visualizer](https://www.triz-consulting.de/FunctionModel/index.html)
+   [🔗 TRIZ Function Analysis – Diagram Tool](https://www.triz-consulting.de/FunctionModel/index.html)
    [🔗 TIRAZIS](https://www.triz-consulting.de/TIRAZIS/)
 
    Both read this one file. TIRAZIS takes the first six columns and ignores the parameter;
-   the Function Model Visualizer reads all seven and uses the two type columns to fill in the
-   component classification that the user would otherwise click together by hand.
+   the Diagram Tool reads all seven and uses the two type columns to fill in the component
+   classification that the user would otherwise click together by hand.
+
+   **Use the tools' real names.** The one at `/FunctionModel/` is called
+   *TRIZ Function Analysis – Diagram Tool*, in German *TRIZ Funktionsanalyse – Diagrammtool*.
+   Not "Function Model Visualizer" — that name exists nowhere.
 
 ## Rules for the function model
 
