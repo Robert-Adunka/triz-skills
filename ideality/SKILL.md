@@ -1,6 +1,6 @@
 ---
 name: ideality
-description: "TRIZ Ideality — optimize technical systems by reducing harm, enhancing usefulness, managing resources, and adding new functions. Use this skill when the user wants to increase system ideality, reduce complexity, improve performance without adding resources, define the ideal system, or mentions 'ideality', 'ideal system', 'ideal final result', 'IFR', or wants to move a system toward its ideal state. Does NOT handle resource analysis in isolation — use triz_resource_analysis for that."
+description: "TRIZ Ideality — optimize technical systems by reducing harm, enhancing usefulness, managing resources, and adding new functions. Use this skill when the user wants to increase system ideality, reduce complexity, improve performance without adding resources, define the ideal system, or mentions 'ideality', 'ideal system', 'ideal technical system', or wants to move a system toward its ideal state. Does NOT handle resource analysis in isolation and does NOT formulate the Ideal Final Result (IFR) — use triz_resource_analysis for both."
 ---
 
 <!--
@@ -33,7 +33,7 @@ You are a TRIZ expert specializing in ideality analysis. Support the user in inc
 - Step 3: Present useful function improvements — ask user to select which to explore.
 - Step 4: Present resource optimization options — ask user to confirm.
 - Step 5: Propose new useful functions — ask user to prioritize.
-- Step 6: Present the IFR formulation — ask user to confirm or refine.
+- Step 6: Present the ideal technical system formulation — ask user to confirm or refine.
 
 ## Analysis Flow
 
@@ -49,7 +49,7 @@ You are a TRIZ expert specializing in ideality analysis. Support the user in inc
 
 5. **Follow-up.** Ask the user if they want to explore one of the four strategies in more detail. Apply that strategy and identify Engineering or Physical Contradictions if applicable.
 
-6. **Ideality modeling.** Formulate the Ideal Final Result (IFR): the system delivers its main function without existing and without harmful side effects. Consider if other systems can achieve the same or better functionality.
+6. **Ideality modeling.** Formulate the **ideal technical system**: the system delivers its main function without existing and without harmful side effects. Consider if other systems can achieve the same or better functionality.
 
 ## Output Format
 
@@ -59,7 +59,7 @@ For each analysis provide:
 - **Strategy 2 — Increase useful functions:** specific suggestions + contradictions identified
 - **Strategy 3 — Reduce resource usage:** specific suggestions + contradictions identified
 - **Strategy 4 — Add new functions:** specific suggestions + contradictions identified
-- **Ideal Final Result (IFR):** "The ideal [system] [performs main function] without existing and without harmful side effects."
+- **Ideal technical system:** "The ideal [system] [performs main function] without existing and without harmful side effects."
 - **Next step recommendation:** which strategy to explore further, or which contradiction to resolve
 
 ## The Ideal Technical System
@@ -69,6 +69,22 @@ An ideal system performs its main function without existing and without any harm
 Examples:
 - The ideal lawn mower cuts grass without existing and without any harmful side effects.
 - The ideal car key starts the car without existing and without any harmful side effects.
+
+### This is not the Ideal Final Result
+
+Equating the two is a well-known mistake, and the MATRIZ knowledge base warns about it on
+both of its pages. Keep them apart:
+
+| | Ideal technical system | Ideal Final Result (IFR) |
+|---|---|---|
+| What it describes | the **system** | one specific **problem** |
+| The system … | does not exist, but its main function is performed | still exists, occupies space, costs money, needs maintenance |
+| Where it belongs | ideality and the evolution of technical systems | ARIZ — and, as a tool of its own, resource work |
+
+This skill produces the **ideal technical system**. It does not formulate an IFR. If the user
+asks for an IFR, say so plainly and point them to `resource-analysis`, where the IFR is used
+as a creative tool: the X in "with the help of X the object does it by itself" is a
+**resource**, so the IFR belongs next to the resource list.
 
 ## TRIZ Resource Types
 

@@ -1,6 +1,6 @@
 ---
 name: resource-analysis
-description: "TRIZ Resource Analysis — identifies and creatively utilizes all six TRIZ resource types (material, field, functional, informational, spatial, temporal) to solve technical or organizational problems. Use this skill when the user mentions 'resource analysis', 'TRIZ resources', 'hidden resources', 'MATChEMIB', or wants to discover available resources in their system, find creative uses for existing resources, or solve a problem without adding new components."
+description: "TRIZ Resource Analysis — identifies and creatively utilizes all six TRIZ resource types (material, field, functional, informational, spatial, temporal) to solve technical or organizational problems. Use this skill when the user mentions 'resource analysis', 'TRIZ resources', 'hidden resources', 'MATChEMIB', 'ideal final result', 'IFR', or wants to discover available resources in their system, find creative uses for existing resources, or solve a problem without adding new components. Also covers the IFR as a standalone creative tool, where the X that makes the object act by itself is filled with one resource after another."
 ---
 
 <!-- 
@@ -47,6 +47,42 @@ Geometric conditions: surfaces, volumes, directions, shapes and forms that can i
 
 ### Temporal Resources
 Times, periods, pauses, and idle times that can be strategically used or modified.
+
+## The Ideal Final Result — resources as the creative move
+
+The IFR is a step of ARIZ, but many authors have taken it out of ARIZ to use it as a tool of
+its own. In that simplified form **operational zone and operational time are left aside**, and
+the **X stands for the resource** that gets put to work. That is why the IFR belongs here, next
+to the resource list, and not in the ideality tool.
+
+### How to run it
+
+1. **State the ideal — the object does it by itself.**
+   *"The stone moves away from there by itself."*
+2. **Introduce X.**
+   *"With the help of X, the stone moves away from there by itself."*
+3. **Search the resources** — go through the six types above.
+4. **Substitute them into X, one at a time**, and read each sentence out:
+   *"With the help of the weight of the stone, the stone moves away from there by itself."*
+   *"With the help of the slope, the stone moves away from there by itself."*
+5. **Read each sentence as a prompt, not as an answer.** The weight sentence leads to: dig
+   underneath the stone and let it fall in. The slope sentence leads to: build a ramp and let
+   it roll down.
+
+### Rules
+
+- **"By itself" is the whole point.** Never soften it to "is moved" or "can be moved" — the
+  self-acting formulation is what forces the idea.
+- **Exactly one resource per sentence.** Put two in and it stops being a prompt and becomes a
+  design.
+- **An absurd sentence is a useful sentence.** Keep it and ask what would have to be true for
+  it to work.
+- **The IFR is not the ideal technical system.** The ideal system does not exist but its main
+  function is still performed. The IFR is the model of the best solution to *one specific
+  problem*: the problem is fully eliminated with minimal changes and without degrading any
+  system parameter — the system itself still exists, costs money and needs maintenance.
+  MATRIZ calls equating the two a major mistake. For the ideal technical system use
+  `ideality`.
 
 ## Examples
 
