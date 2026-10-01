@@ -49,9 +49,12 @@ describe a system to start in automatic mode"* — that offer is not part of thi
    - **Maintain or reduce resource usage** — achieve more with less
    - **Add new useful functions** — expand what the system can do
 
-4. **For each strategy,** provide specific suggestions.
+4. **For each strategy,** give **development directions** — see *Directions before ideas*.
+   Directions are the main output of this skill; ideas are allowed underneath them, but
+   subordinate.
 
-5. **Follow-up.** Ask the user if they want to explore one of the four strategies in more detail, and apply that strategy.
+5. **Follow-up.** Ask the user if they want to explore one of the four strategies in more
+   detail, and apply that strategy — again as directions first.
 
 6. **Ideality modeling.** Formulate the **ideal technical system**: the system delivers its main function without existing and without harmful side effects. Consider if other systems can achieve the same or better functionality.
 
@@ -59,12 +62,35 @@ describe a system to start in automatic mode"* — that offer is not part of thi
 
 For each analysis provide:
 - **System summary:** name, main function, known issues
-- **Strategy 1 — Reduce harmful effects:** specific suggestions
-- **Strategy 2 — Increase useful functions:** specific suggestions
-- **Strategy 3 — Reduce resource usage:** specific suggestions
-- **Strategy 4 — Add new functions:** specific suggestions
+- **Strategy 1 — Reduce harmful effects:** directions, each with at most one or two example ideas
+- **Strategy 2 — Increase useful functions:** directions, each with at most one or two example ideas
+- **Strategy 3 — Reduce resource usage:** directions, each with at most one or two example ideas
+- **Strategy 4 — Add new functions:** directions, each with at most one or two example ideas
 - **Ideal technical system:** "The ideal [system] [performs main function] without existing and without harmful side effects."
 - **Next steps:** which strategy to explore further here, and which *other* tool to continue with
+
+## Directions before ideas
+
+What this skill produces is **directions of development**. A direction names a *movement* —
+away from what, towards what, and which part of the ideality ratio gets better. An idea names
+a *thing*.
+
+> **A direction:** "Take the energy source out of the user's hand. The dominant payment factor
+> is the weight carried in the hand, not the energy itself."
+> **Ideas underneath it:** *(for example a belt battery, or energy fed through the handle)*
+
+**Not directions:** "integrated LED lighting", "Bluetooth screw counting", "brushless motor".
+Those are product features. They name a thing instead of a movement, and they end the user's
+thinking instead of starting it.
+
+### Rules
+
+- Every direction must say **which payment factor it lowers or which benefit it raises**. If
+  you cannot say which term of the equation it improves, it is not a direction — drop it.
+- Ideas are welcome as evidence that a direction is passable. **At most one or two per
+  direction**, in brackets, visibly marked as examples.
+- Never let an idea stand alone as the result of a strategy.
+- Two or three good directions beat eight features.
 
 ## The Ideality Equation
 
