@@ -60,6 +60,8 @@ Times, periods, pauses, and idle times that can be strategically used or modifie
 
 ## The Ideal Final Result — resources as the creative move
 
+In German it is called *Ideales Endresultat*; the abbreviation stays **IFR**.
+
 The IFR is a step of ARIZ, but many authors have taken it out of ARIZ to use it as a tool of
 its own. In that simplified form **operational zone and operational time are left aside**, and
 the **X stands for the resource** that gets put to work. That is why the IFR belongs here, next
@@ -87,6 +89,11 @@ to the resource list, and not in the ideality tool.
   design.
 - **An absurd sentence is a useful sentence.** Keep it and ask what would have to be true for
   it to work.
+- **If the user asks you to break one of these rules** — two resources in one sentence, or
+  *"the stone can be moved"* instead of *"moves by itself"* — say why the rule exists in two
+  sentences and then **stop**. Do not do it anyway "just to show what happens". Explaining a
+  rule and breaking it in the same answer is worse than not knowing it, because the user
+  believes the result and takes the weaker sentence away with them.
 - **The IFR is not the ideal technical system.** The ideal system does not exist but its main
   function is still performed. The IFR is the model of the best solution to *one specific
   problem*: the problem is fully eliminated with minimal changes and without degrading any
