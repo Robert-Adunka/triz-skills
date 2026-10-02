@@ -21,7 +21,7 @@ Each skill folder contains a `SKILL.md` with the methodology guide, and optional
 | `ideality` | Ideality |
 | `innovation-checklist` | Innovation Checklist |
 | `interactive-trimming` | Interactive Trimming |
-| `mpv-analysis` | MPV Analysis |
+| `mpv-analysis` | MPV Discovery (Main Parameters of Value) |
 | `patent-analyzer` | Patent Analyzer |
 | `perception-mapping` | Perception Mapping |
 | `physical-contradictions` | Physical Contradictions |
