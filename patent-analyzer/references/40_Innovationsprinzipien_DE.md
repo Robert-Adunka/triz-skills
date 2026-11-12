@@ -95,7 +95,7 @@ Synonyme: Segmentierung, Segmentieren, Zerlegung, Zerstückelung
 1. Unzureichende Zuverlässigkeit eines Systems durch zuvor getroffene Gegenmaßnahmen kompensieren: (1) Ein Überdruckventil verhindert das Bersten von Rohren oder Tanks, indem es die Flüssigkeit oder das Gas ablässt, wenn der Druck zu hoch ist. (2) Der Airbag im Auto verhindert schwere Verletzungen, indem er ein Gaspolster bildet, bevor der Kopf das Lenkrad berührt. (3) Schutzhüllen für Handy federn Stürze und Schläge ab und schützen so das Gerät.
 ----------
 
-# IP #12 Äquipotentialprinz
+# IP #12 Äquipotentialprinzip
 
 *Synonyme:* Äquipotential, Äquipotentialität, kürzester Weg (ohne Anheben und Absenken des Objekts) Gleichgewicht, äquipotentieller Transport (auf gerader oder kreisförmiger Linie ohne Anheben und Absenken), „Vor-Ort“-Arbeitsweise, Dinge auf die gleiche Ebene bringen, Spannungen beseitigen
 
